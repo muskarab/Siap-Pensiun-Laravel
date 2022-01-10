@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\UserController;
@@ -48,18 +49,28 @@ Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')-
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::group(['middleware' => ['cek_login:Admin']], function () {
+        // Users
         Route::get('/users', [UserController::class, 'index'])->name('users');
         Route::get('/users/fetchall', [UserController::class, 'fetchAll'])->name('fetchAll_user');
         Route::post('/users/store', [UserController::class, 'store'])->name('store_user');
         Route::get('/users/edit', [UserController::class, 'edit'])->name('edit_user');
         Route::post('/users/update', [UserController::class, 'update'])->name('update_user');
         Route::delete('/users/delete', [UserController::class, 'destroy'])->name('delete_user');
+        // Sliders
         Route::get('/sliders', [SliderController::class, 'index'])->name('sliders');
         Route::get('/sliders/fetchall', [SliderController::class, 'fetchAll'])->name('fetchAll_slider');
         Route::post('/sliders/store', [SliderController::class, 'store'])->name('store_slider');
         Route::get('/sliders/edit', [SliderController::class, 'edit'])->name('edit_slider');
         Route::post('/sliders/update', [SliderController::class, 'update'])->name('update_slider');
         Route::delete('/sliders/delete', [SliderController::class, 'destroy'])->name('delete_slider');
+        // Articles
+        Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
+        Route::get('/article', [ArticleController::class, 'index_landing_page'])->name('articles_landing_page');
+        Route::get('/articles/fetchall', [ArticleController::class, 'fetchAll'])->name('fetchAll_article');
+        Route::post('/articles/store', [ArticleController::class, 'store'])->name('store_article');
+        Route::get('/articles/edit', [ArticleController::class, 'edit'])->name('edit_article');
+        Route::post('/articles/update', [ArticleController::class, 'update'])->name('update_article');
+        Route::delete('/articles/delete', [ArticleController::class, 'destroy'])->name('delete_article');
     });
     // Route::get('/billing', Billing::class)->name('billing');
     // Route::get('/profile', Profile::class)->name('profile');

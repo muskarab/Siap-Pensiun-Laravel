@@ -49,7 +49,7 @@
                     <a class="nav-link">Tesimoni</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link">Artikel</a>
+                    <a class="nav-link" href="{{ route('articles_landing_page') }}">Artikel</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link">Bantuan</a>
