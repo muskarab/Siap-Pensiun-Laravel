@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,7 +19,7 @@ use App\Http\Livewire\Rtl;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
-
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 /*
@@ -33,7 +34,8 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function(){
-    return view('welcome');
+    $sliders = Slider::get();
+    return view('welcome', compact('sliders'));
 })->name('welcome');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
@@ -52,6 +54,12 @@ Route::middleware('auth')->group(function () {
         Route::get('/users/edit', [UserController::class, 'edit'])->name('edit_user');
         Route::post('/users/update', [UserController::class, 'update'])->name('update_user');
         Route::delete('/users/delete', [UserController::class, 'destroy'])->name('delete_user');
+        Route::get('/sliders', [SliderController::class, 'index'])->name('sliders');
+        Route::get('/sliders/fetchall', [SliderController::class, 'fetchAll'])->name('fetchAll_slider');
+        Route::post('/sliders/store', [SliderController::class, 'store'])->name('store_slider');
+        Route::get('/sliders/edit', [SliderController::class, 'edit'])->name('edit_slider');
+        Route::post('/sliders/update', [SliderController::class, 'update'])->name('update_slider');
+        Route::delete('/sliders/delete', [SliderController::class, 'destroy'])->name('delete_slider');
     });
     // Route::get('/billing', Billing::class)->name('billing');
     // Route::get('/profile', Profile::class)->name('profile');

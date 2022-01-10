@@ -185,6 +185,7 @@
                     )
                     fetchAllUsers();
                     }
+                    $("#add_user_btn").text('Add User');
                     $("#add_user_form")[0].reset();
                     $("#addUserModal").modal('hide');
                 }
