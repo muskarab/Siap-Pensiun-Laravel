@@ -4,6 +4,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamController;
+use App\Http\Controllers\TestimoniController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -79,6 +80,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/teams/edit', [TeamController::class, 'edit'])->name('edit_team');
         Route::post('/teams/update', [TeamController::class, 'update'])->name('update_team');
         Route::delete('/teams/delete', [TeamController::class, 'destroy'])->name('delete_team');
+        //Testimoni
+        Route::get('/testimonies', [TestimoniController::class, 'index'])->name('testimonies');
+        Route::get('/testimonies/fetchall', [TestimoniController::class, 'fetchAll'])->name('fetchAll_testimoni');
+        Route::post('/testimonies/store', [TestimoniController::class, 'store'])->name('store_testimoni');
+        Route::get('/testimonies/edit', [TestimoniController::class, 'edit'])->name('edit_testimoni');
+        Route::post('/testimonies/update', [TestimoniController::class, 'update'])->name('update_testimoni');
+        Route::delete('/testimonies/delete', [TestimoniController::class, 'destroy'])->name('delete_testimoni');
     });
     // Route::get('/billing', Billing::class)->name('billing');
     // Route::get('/profile', Profile::class)->name('profile');

@@ -314,7 +314,7 @@
                             <img src="../assets/img/small-logos/logo-xd.svg" class="avatar avatar-sm me-3">
                           </div>
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Soft UI XD Version</h6>
+                            <h6 class="mb-0 text-sm">Dictum malesuada fringilla habitant montes vehicula sed metus. Ipsum eleifend aptent mollis consequat semper scelerisque. Libero phasellus gravida class pharetra potenti litora fringilla vel.</h6>
                           </div>
                         </div>
                       </td>

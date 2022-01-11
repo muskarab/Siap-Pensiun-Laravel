@@ -31,7 +31,7 @@ class UserController extends Controller
             <thead>
               <tr>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                    ID
+                    NO
                 </th>
                 <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
                     Photo

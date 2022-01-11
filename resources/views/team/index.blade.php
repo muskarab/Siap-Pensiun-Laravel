@@ -15,7 +15,7 @@
                 <div class="modal-body p-4">
                     <label>Name</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="name" class="form-control" placeholder="Header" aria-label="Header" aria-describedby="header-addon" required>
+                    <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" required>
                     </div>
                     <label>Position</label>
                     <div class="input-group mb-3">
@@ -75,20 +75,22 @@
     </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4 mx-4">
-                <div class="card-header pb-0">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div>
-                            <h5 class="mb-0">All Teams</h5>
+    <div class="container-fluid py4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4 mx-4">
+                    <div class="card-header pb-0">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="mb-0">All Teams</h5>
+                            </div>
+                            <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addTeamModal">+&nbsp; New Team</button>
                         </div>
-                        <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addTeamModal">+&nbsp; New Team</button>
                     </div>
-                </div>
-                <div class="card-body" id="show_all_teams">
-                    <div class="table-responsive p-0">
-                        <h1 class="text-center text-secondary my-5">Loading...</h1>
+                    <div class="card-body" id="show_all_teams">
+                        <div class="table-responsive p-0">
+                            <h1 class="text-center text-secondary my-5">Loading...</h1>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -75,20 +75,22 @@
     </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4 mx-4">
-                <div class="card-header pb-0">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div>
-                            <h5 class="mb-0">All Sliders</h5>
+    <div class="container-fluid py4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4 mx-4">
+                    <div class="card-header pb-0">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="mb-0">All Sliders</h5>
+                            </div>
+                            <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addSliderModal">+&nbsp; New Slider</button>
                         </div>
-                        <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addSliderModal">+&nbsp; New Slider</button>
                     </div>
-                </div>
-                <div class="card-body" id="show_all_sliders">
-                    <div class="table-responsive p-0">
-                        <h1 class="text-center text-secondary my-5">Loading...</h1>
+                    <div class="card-body" id="show_all_sliders">
+                        <div class="table-responsive p-0">
+                            <h1 class="text-center text-secondary my-5">Loading...</h1>
+                        </div>
                     </div>
                 </div>
             </div>

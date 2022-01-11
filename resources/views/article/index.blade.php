@@ -2,7 +2,7 @@
 @section('content')
     <!-- AddArticleModal -->
     <div class="modal fade" id="addArticleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Add Article</h5>
@@ -37,7 +37,7 @@
 
     <!-- EditArticleModal -->
     <div class="modal fade" id="editArticleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Edit Article</h5>
@@ -75,20 +75,22 @@
     </div>
     </div>
 
-    <div class="row">
-        <div class="col-12">
-            <div class="card mb-4 mx-4">
-                <div class="card-header pb-0">
-                    <div class="d-flex flex-row justify-content-between">
-                        <div>
-                            <h5 class="mb-0">All Articles</h5>
+    <div class="container-fluid py4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card mb-4 mx-4">
+                    <div class="card-header pb-0">
+                        <div class="d-flex flex-row justify-content-between">
+                            <div>
+                                <h5 class="mb-0">All Articles</h5>
+                            </div>
+                            <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addArticleModal">+&nbsp; New Article</button>
                         </div>
-                        <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addArticleModal">+&nbsp; New Article</button>
                     </div>
-                </div>
-                <div class="card-body" id="show_all_articles">
-                    <div class="table-responsive p-0">
-                        <h1 class="text-center text-secondary my-5">Loading...</h1>
+                    <div class="card-body" id="show_all_articles">
+                        <div class="table-responsive p-0">
+                            <h1 class="text-center text-secondary my-5">Loading...</h1>
+                        </div>
                     </div>
                 </div>
             </div>
