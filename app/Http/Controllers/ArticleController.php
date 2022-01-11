@@ -21,7 +21,8 @@ class ArticleController extends Controller
 
     public function index_landing_page()
     {
-        return view('article.landing_page');
+        $articles = Article::get();
+        return view('article.landing_page', compact('articles'));
     }
 
     public function fetchAll()
@@ -64,7 +65,7 @@ class ArticleController extends Controller
                     <td class="text-center">
                         <p class="text-xs font-weight-bold mb-0">' . $article->header . '</p>
                     </td>
-                    <td class="text-center">
+                    <td>
                         <p class="text-xs font-weight-bold mb-0">' . $article->content . '</p>
                     </td>
                     <td class="text-center">

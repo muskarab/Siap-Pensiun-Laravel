@@ -19,7 +19,8 @@
                     </div>
                     <label>Content</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required>
+                    {{-- <input type="text" name="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required> --}}
+                    <textarea name="content" id="content" cols="50" rows="10"></textarea>
                     </div>
                     <label>Image</label>
                     <div class="input-group mb-3">
@@ -99,8 +100,10 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 <script type="text/javascript" src="https://cdn.datatables.net/v/bs5/dt-1.10.25/datatables.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
 <script>
     $(function() {
+        CKEDITOR.replace( 'content' );
         // add new article ajax request
         $("#add_article_form").submit(function(e) {
             e.preventDefault();

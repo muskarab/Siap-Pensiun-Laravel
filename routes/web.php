@@ -22,6 +22,7 @@ use App\Http\Livewire\Rtl;
 
 use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
+use App\Models\Article;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 
@@ -38,7 +39,8 @@ use Illuminate\Http\Request;
 
 Route::get('/', function(){
     $sliders = Slider::get();
-    return view('welcome', compact('sliders'));
+    $articles = Article::get();
+    return view('welcome', compact('sliders', 'articles'));
 })->name('welcome');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
