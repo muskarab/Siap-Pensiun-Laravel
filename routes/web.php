@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -71,6 +72,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/articles/edit', [ArticleController::class, 'edit'])->name('edit_article');
         Route::post('/articles/update', [ArticleController::class, 'update'])->name('update_article');
         Route::delete('/articles/delete', [ArticleController::class, 'destroy'])->name('delete_article');
+        //Teams
+        Route::get('/teams', [TeamController::class, 'index'])->name('teams');
+        Route::get('/teams/fetchall', [TeamController::class, 'fetchAll'])->name('fetchAll_team');
+        Route::post('/teams/store', [TeamController::class, 'store'])->name('store_team');
+        Route::get('/teams/edit', [TeamController::class, 'edit'])->name('edit_team');
+        Route::post('/teams/update', [TeamController::class, 'update'])->name('update_team');
+        Route::delete('/teams/delete', [TeamController::class, 'destroy'])->name('delete_team');
     });
     // Route::get('/billing', Billing::class)->name('billing');
     // Route::get('/profile', Profile::class)->name('profile');

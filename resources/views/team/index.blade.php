@@ -1,74 +1,74 @@
 @extends('layouts.base')
 @section('content')
-    <!-- AddArticleModal -->
-    <div class="modal fade" id="addArticleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <!-- AddTeamModal -->
+    <div class="modal fade" id="addTeamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Article</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Teams</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="add_article_form" enctype="multipart/form-data">
+            <form method="POST" id="add_team_form" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-body p-4">
-                    <label>Header</label>
+                    <label>Name</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="header" class="form-control" placeholder="Header" aria-label="Header" aria-describedby="header-addon" required>
+                    <input type="text" name="name" class="form-control" placeholder="Header" aria-label="Header" aria-describedby="header-addon" required>
                     </div>
-                    <label>Content</label>
+                    <label>Position</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required>
+                    <input type="text" name="position" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required>
                     </div>
-                    <label>Image</label>
+                    <label>Avatar</label>
                     <div class="input-group mb-3">
-                    <input type="file" name="image" class="form-control" placeholder="Image" aria-label="Image" aria-describedby="image-addon" required>
+                    <input type="file" name="avatar" class="form-control" placeholder="Image" aria-label="Image" aria-describedby="image-addon" required>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" id="add_article_btn" class="btn bg-gradient-primary">Save</button>
+                    <button type="submit" id="add_team_btn" class="btn bg-gradient-primary">Save</button>
                 </div>
             </form>
         </div>
     </div>
     </div>
 
-    <!-- EditArticleModal -->
-    <div class="modal fade" id="editArticleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <!-- EditTeamModal -->
+    <div class="modal fade" id="editTeamModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Article</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Team</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form method="POST" id="edit_article_form" enctype="multipart/form-data">
+            <form method="POST" id="edit_team_form" enctype="multipart/form-data">
                 @csrf
-                <input type="hidden" name="article_id" id="article_id">
-                <input type="hidden" name="article_image" id="article_image">
+                <input type="hidden" name="team_id" id="team_id">
+                <input type="hidden" name="team_avatar" id="team_avatar">
                 <div class="modal-body p-4">
-                    <label>Header</label>
+                    <label>Name</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="header" id="header" class="form-control" placeholder="Header" aria-label="Header" aria-describedby="header-addon" required>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="name-addon" required>
                     </div>
-                    <label>Content</label>
+                    <label>Position</label>
                     <div class="input-group mb-3">
-                    <input type="text" name="content" id="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required>
+                    <input type="text" name="position" id="position" class="form-control" placeholder="Position" aria-label="Position" aria-describedby="position-addon" required>
                     </div>
-                    <label>Image</label>
+                    <label>Avatar</label>
                     <div class="input-group mb-3">
-                    <input type="file" name="image" class="form-control" placeholder="Image" aria-label="Image" aria-describedby="image-addon">
+                    <input type="file" name="avatar" class="form-control" placeholder="Avatar" aria-label="Avatar" aria-describedby="avatar-addon">
                     </div>
-                    <div class="mb-3" id="image">
+                    <div class="mb-3" id="avatar">
 
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn bg-gradient-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" id="edit_article_btn" class="btn bg-gradient-primary">Save changes</button>
+                    <button type="submit" id="edit_team_btn" class="btn bg-gradient-primary">Save changes</button>
                 </div>
             </form>
         </div>
@@ -81,12 +81,12 @@
                 <div class="card-header pb-0">
                     <div class="d-flex flex-row justify-content-between">
                         <div>
-                            <h5 class="mb-0">All Articles</h5>
+                            <h5 class="mb-0">All Teams</h5>
                         </div>
-                        <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addArticleModal">+&nbsp; New Article</button>
+                        <button class="btn bg-gradient-primary btn-sm mb-0" data-bs-toggle="modal" data-bs-target="#addTeamModal">+&nbsp; New Team</button>
                     </div>
                 </div>
-                <div class="card-body" id="show_all_articles">
+                <div class="card-body" id="show_all_teams">
                     <div class="table-responsive p-0">
                         <h1 class="text-center text-secondary my-5">Loading...</h1>
                     </div>
@@ -99,13 +99,13 @@
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
     $(function() {
-        // add new article ajax request
-        $("#add_article_form").submit(function(e) {
+        // add new team ajax request
+        $("#add_team_form").submit(function(e) {
             e.preventDefault();
             const fd = new FormData(this);
-            $("#add_article_btn").text('Adding...');
+            $("#add_team_btn").text('Adding...');
             $.ajax({
-            url: '{{ route('store_article') }}',
+            url: '{{ route('store_team') }}',
             method: 'post',
             data: fd,
             cache: false,
@@ -116,47 +116,47 @@
                     if (response.status == 200) {
                     Swal.fire(
                         'Added!',
-                        'Article Added Successfully!',
+                        'Team Added Successfully!',
                         'success'
                     )
-                    fetchAllArticles();
+                    fetchAllTeams();
                     }
-                    $("#add_article_btn").text('Add Article');
-                    $("#add_article_form")[0].reset();
-                    $("#addArticleModal").modal('hide');
+                    $("#add_team_btn").text('Add Team');
+                    $("#add_team_form")[0].reset();
+                    $("#addTeamModal").modal('hide');
                 }
             });
         });
 
-        // edit article ajax request
+        // edit team ajax request
         $(document).on('click', '.editIcon', function(e) {
             e.preventDefault();
             let id = $(this).attr('id');
             $.ajax({
-                url: '{{ route('edit_article') }}',
+                url: '{{ route('edit_team') }}',
                 method: 'get',
                 data: {
                     id: id,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
-                    $("#header").val(response.header);
-                    $("#content").val(response.content);
-                    $("#image").html(
-                        `<img src="storage/articles/${response.image}" width="200" class="img-thumbnail">`);
-                    $("#article_id").val(response.id);
-                    $("#article_image").val(response.image);
+                    $("#name").val(response.name);
+                    $("#position").val(response.position);
+                    $("#avatar").html(
+                        `<img src="storage/teams/${response.avatar}" width="200" class="img-thumbnail">`);
+                    $("#team_id").val(response.id);
+                    $("#team_avatar").val(response.avatar);
                 }
             });
         });
 
-        // update article ajax request
-        $("#edit_article_form").submit(function(e) {
+        // update team ajax request
+        $("#edit_team_form").submit(function(e) {
             e.preventDefault();
             const fd = new FormData(this);
-            $("#edit_article_btn").text('Updating...');
+            $("#edit_team_btn").text('Updating...');
             $.ajax({
-            url: '{{ route('update_article') }}',
+            url: '{{ route('update_team') }}',
             method: 'post',
             data: fd,
             cache: false,
@@ -167,19 +167,19 @@
                 if (response.status == 200) {
                 Swal.fire(
                     'Updated!',
-                    'Article Updated Successfully!',
+                    'Team Updated Successfully!',
                     'success'
                 )
-                fetchAllArticles();
+                fetchAllTeams();
                 }
-                $("#edit_article_btn").text('Update Article');
-                $("#edit_article_form")[0].reset();
-                $("#editArticleModal").modal('hide');
+                $("#edit_team_btn").text('Update Team');
+                $("#edit_team_form")[0].reset();
+                $("#editTeamModal").modal('hide');
             }
             });
         });
 
-        // delete article ajax request
+        // delete team ajax request
         $(document).on('click', '.deleteIcon', function(e) {
             e.preventDefault();
             let id = $(this).attr('id');
@@ -195,7 +195,7 @@
             }).then((result) => {
             if (result.isConfirmed) {
                 $.ajax({
-                url: '{{ route('delete_article') }}',
+                url: '{{ route('delete_team') }}',
                 method: 'delete',
                 data: {
                     id: id,
@@ -208,22 +208,22 @@
                     'Your file has been deleted.',
                     'success'
                     )
-                    fetchAllArticles();
+                    fetchAllTeams();
                 }
                 });
             }
             })
         });
 
-        // fetch all article ajax request
-        fetchAllArticles();
+        // fetch all team ajax request
+        fetchAllTeams();
 
-        function fetchAllArticles() {
+        function fetchAllTeams() {
             $.ajax({
-            url: '{{ route('fetchAll_article') }}',
+            url: '{{ route('fetchAll_team') }}',
             method: 'get',
             success: function(response) {
-                $("#show_all_articles").html(response);
+                $("#show_all_teams").html(response);
                 // $("table").DataTable({
                 // order: [0, 'asc']
                 // });
