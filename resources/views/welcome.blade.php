@@ -125,32 +125,43 @@
 </div>
 {{-- End Carausel --}}
 {{-- Tata cara pengajuan --}}
-<section class="py-7" id="pengajuan">
+<section class="py-6" id="pengajuan">
     <div class="container">
-    <div class="row align-items-center">
-        <div class="col-lg-12">
-            <div class="row justify-content-start">
-                <div class="col-md-4">
-                <div class="info">
-                    <h5>Keuntungan Menarik</h5>
-                    <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="info">
-                    <h5>Keuntungan Menarik</h5>
-                    <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
-                </div>
-                </div>
-                <div class="col-md-4">
-                <div class="info">
-                    <h5>Keuntungan Menarik</h5>
-                    <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
-                </div>
+        <div class="row">
+            <div class="col-lg-6">
+            <h3 class="mt-2">Tata Cara Pengajuan</h3>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <div class="row justify-content-start">
+                    <div class="col-md-4">
+                    <div class="info">
+                        <h5>Keuntungan Menarik</h5>
+                        <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="info">
+                        <h5>Keuntungan Menarik</h5>
+                        <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
+                    </div>
+                    </div>
+                    <div class="col-md-4 mb-2">
+                    <div class="info">
+                        <h5>Keuntungan Menarik</h5>
+                        <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
+                    </div>
+                    </div>
+                    <div class="col-md-4">
+                    <div class="info">
+                        <h5>Keuntungan Menarik</h5>
+                        <p>Dapatkan keuntungan hingga 15% per tahun & cashflow mingguan pembayaran angsuran dapat diambil kapanpun.</p>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </section>
 {{-- End Tata cara pengajuan --}}
@@ -325,115 +336,90 @@
 {{-- End Artikel --}}
 {{-- Testimoni --}}
 <section class="py-3" id="testimoni">
-    {{-- <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-6">
-            <h3 class="mb-5">Apa Kata Mereka</h3>
+            <h3 class="mt-2">Apa Kata Mereka</h3>
             </div>
         </div>
         <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain card-blog">
-                    <div class="card-image border-radius-lg position-relative">
-                    <a href="javascript:;">
-                        <img class="w-100 border-radius-lg move-on-hover shadow" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-bags.jpg">
-                    </a>
-                    </div>
-                    <div class="card-body px-0">
-                    <h5>
-                        <a href="javascript:;" class="text-dark font-weight-bold">Rover raised $65 million</a>
-                    </h5>
-                    <p>
-                        Finding temporary housing for your dog should be as easy as
-                        renting an Airbnb. That’s the idea behind Rover ...
-                    </p>
-                    <a href="javascript:;" class="text-info icon-move-right">Read More
-                        <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                    </div>
+            <div id="carouselTestimonies" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @php
+                        $data_nama = [];
+                        $data_text = [];
+                        $data_avatar = [];
+                        $j = 0;
+                        $i = 1;
+                        $jumlah_slide = $count_testimoni / 3;
+                        $cek_jml_slide = 0;
+                        $cek_jml_cart = 0;
+                    @endphp
+                    @foreach ($testimonies as $testimoni)
+                        @php
+                            $data_nama[$j] = $testimoni->name;
+                            $data_text[$j] = $testimoni->text;
+                            $data_avatar[$j] = $testimoni->avatar;
+                            $j++;
+                        @endphp
+                    @endforeach
+                    @while ($cek_jml_slide < $jumlah_slide)
+                        <div class="carousel-item {{ $i == '1' ? 'active' : '' }}">
+                            @php
+                                $i++;
+                            @endphp
+                            <div class="page-header section-height-75 m-3 border-radius-xl">
+                            <span class="mask bg-gradient-dark"></span>
+                            <div class="container">
+                                <div class="card-group">
+                                    <div class="row text-center">
+                                        
+                                    
+                        @php
+                            $cek_jml_slide++;
+                            $cek_jml_cart_slide = 0;
+                        @endphp
+                        @while ($cek_jml_cart_slide < 3 && $cek_jml_cart < $count_testimoni)
+                                    <div class="col-sm-3 card me-2" style="border-radius: 3%;">
+                                        <div class="card-header p-0 mx-3 mt-3 position-relative z-index-1">
+                                        <a href="javascript:;" class="d-block">
+                                            <img src="storage/testimonies/{{ $data_avatar[$cek_jml_cart] }}" class="img-fluid border-radius-lg" style="border-radius: 50%; height: 250px; width: 250px; margin: auto; border: 1px solid black;">
+                                        </a>
+                                        </div>
+                                        <div class="card-body pt-2">
+                                        <a href="javascript:;" class="card-title h5 d-block text-darker">
+                                            {{ $data_nama[$cek_jml_cart] }}
+                                        </a>
+                                        <p class="card-description mb-4">
+                                            {{ $data_text[$cek_jml_cart] }}
+                                        </p>
+                                        </div>
+                                        </div>
+                                    
+                        @php
+                            $cek_jml_cart++;
+                            $cek_jml_cart_slide++;
+                        @endphp
+                        @endwhile
+                        </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    @endwhile
+                        
                 </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain card-blog">
-                    <div class="card-image border-radius-lg position-relative">
-                    <a href="javascript:;">
-                        <img class="w-100 border-radius-lg move-on-hover shadow" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-wall.jpg">
-                    </a>
-                    </div>
-                    <div class="card-body px-0">
-                    <h5>
-                        <a href="javascript:;" class="text-dark font-weight-bold">MateLabs machine learning</a>
-                    </h5>
-                    <p>
-                        If you’ve ever wanted to train a machine learning model
-                        and integrate it with IFTTT, you now can with ...
-                    </p>
-                    <a href="javascript:;" class="text-info icon-move-right">Read More
-                        <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                    </div>
-                </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                <div class="card card-plain card-blog">
-                    <div class="card-image border-radius-lg position-relative">
-                    <a href="javascript:;">
-                        <img class="w-100 border-radius-lg move-on-hover shadow" src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/color-clock.jpg">
-                    </a>
-                    </div>
-                    <div class="card-body px-0">
-                    <h5>
-                        <a href="javascript:;" class="text-dark font-weight-bold">US venture investment ticks</a>
-                    </h5>
-                    <p>
-                        Venture investment in U.S. startups rose sequentially in
-                        the second quarter of 2017, boosted by large, ate-stage financings
-                    </p>
-                    <a href="javascript:;" class="text-info icon-move-right">Read More
-                        <i class="fas fa-arrow-right text-sm"></i>
-                    </a>
-                    </div>
-                </div>
-                </div>
-        </div>
-    </div> --}}
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            @php
-                $i = 1;
-            @endphp
-            @foreach ($sliders as $slider)
-            <div class="carousel-item {{ $i == '1' ? 'active' : '' }}">
-                @php
-                    $i++;
-                @endphp
-                <div class="page-header section-height-75 m-3 border-radius-xl">
-                <span class="mask bg-gradient-dark"></span>
-                <div class="container">
-                    <div class="row">
-                    <div class="col-lg-6 my-auto">
-                        {{-- <h4 class="text-white mb-0 fadeIn1 fadeInBottom">{{ $slider->header }}</h4> --}}
-                        <h1 class="text-white fadeIn2 fadeInBottom">{{ $slider->header }}</h1>
-                        <p class="lead text-white opacity-8 fadeIn3 fadeInBottom">{{ $slider->content }}</p>
-                    </div>
-                    <div class="col-lg-6 my-auto">
-                        <img src="storage/sliders/{{$slider->image }}" class="img-fluid border-radius-lg" style="height: 300px">
-                    </div>
-                    </div>
-                </div>
+                <div class="section-height-75 position-absolute w-100 top-0">
+                <a class="carousel-control-prev" href="#carouselTestimonies" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon position-absolute bottom-50" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselTestimonies" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon position-absolute bottom-50" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
                 </div>
             </div>
-            @endforeach
-        </div>
-        <div class="section-height-75 position-absolute w-100 top-0">
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon position-absolute bottom-50" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon position-absolute bottom-50" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
         </div>
     </div>
 </section>

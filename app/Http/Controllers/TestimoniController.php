@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Testimoni;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class TestimoniController extends Controller
 {
@@ -82,7 +83,7 @@ class TestimoniController extends Controller
                         <p class="text-xs font-weight-bold mb-0">' . $testimoni->name . '</p>
                     </td>
                     <td class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">' . $testimoni->text . '</p>
+                        <p class="text-xs font-weight-bold mb-0">' . Str::limit($testimoni->text, 50, $end = '...') . '</p>
                     </td>
                     <td class="text-center">
                         <a href="#" id="' . $testimoni->id . '" class="mx-3 editIcon" data-bs-toggle="modal"

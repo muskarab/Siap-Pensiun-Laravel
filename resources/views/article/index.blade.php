@@ -20,7 +20,8 @@
                     <label>Content</label>
                     <div class="input-group mb-3">
                     {{-- <input type="text" name="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required> --}}
-                    <textarea name="content" id="content" cols="50" rows="10"></textarea>
+                    {{-- <textarea name="content" id="content" cols="50" rows="10"></textarea> --}}
+                    <textarea name="content"></textarea>
                     </div>
                     <label>Image</label>
                     <div class="input-group mb-3">
@@ -58,7 +59,7 @@
                     <label>Content</label>
                     <div class="input-group mb-3">
                     {{-- <input type="text" name="content" id="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required> --}}
-                    <textarea name="content" id="content" cols="50" rows="10"></textarea>
+                    <textarea name="content" id="content" cols="90" rows="10"></textarea>
                     </div>
                     <label>Image</label>
                     <div class="input-group mb-3">

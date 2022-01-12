@@ -25,6 +25,7 @@ use App\Http\Livewire\LaravelExamples\UserManagement;
 use App\Models\Article;
 use App\Models\Slider;
 use App\Models\Team;
+use App\Models\Testimoni;
 use Illuminate\Http\Request;
 
 /*
@@ -42,7 +43,9 @@ Route::get('/', function(){
     $sliders = Slider::get();
     $articles = Article::orderByRaw('created_at DESC')->paginate(3);
     $teams = Team::get();
-    return view('welcome', compact('sliders', 'articles', 'teams'));
+    $testimonies = Testimoni::get();
+    $count_testimoni = $testimonies->count();;
+    return view('welcome', compact('sliders', 'articles', 'teams', 'testimonies', 'count_testimoni'));
 })->name('welcome');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
