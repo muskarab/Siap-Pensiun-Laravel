@@ -75,6 +75,7 @@ Route::middleware('auth')->group(function () {
         // Articles
         Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
         Route::get('/article', [ArticleController::class, 'index_landing_page'])->name('articles_landing_page');
+        Route::get('/article/{slug}', [ArticleController::class, 'show']);
         Route::get('/articles/fetchall', [ArticleController::class, 'fetchAll'])->name('fetchAll_article');
         Route::post('/articles/store', [ArticleController::class, 'store'])->name('store_article');
         Route::get('/articles/edit', [ArticleController::class, 'edit'])->name('edit_article');

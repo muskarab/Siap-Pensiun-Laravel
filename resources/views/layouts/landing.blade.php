@@ -78,7 +78,7 @@
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="navbar-nav navbar-nav-hover mx-auto">
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="{{ route('welcome') }}">Beranda</a>
+                    <a class="nav-link" href="#welcome">Beranda</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link">Tentang Kami</a>

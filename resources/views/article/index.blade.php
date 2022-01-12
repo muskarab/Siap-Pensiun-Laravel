@@ -59,7 +59,7 @@
                     <label>Content</label>
                     <div class="input-group mb-3">
                     {{-- <input type="text" name="content" id="content" class="form-control" placeholder="Content" aria-label="Content" aria-describedby="content-addon" required> --}}
-                    <textarea name="content" id="content" cols="90" rows="10"></textarea>
+                    <textarea name="content_edit" id="content_edit"></textarea>
                     </div>
                     <label>Image</label>
                     <div class="input-group mb-3">
@@ -106,6 +106,8 @@
 <script>
     $(function() {
         CKEDITOR.replace( 'content' );
+        CKEDITOR.replace( 'content_edit' );
+        
         // add new article ajax request
         $("#add_article_form").submit(function(e) {
             e.preventDefault();
@@ -148,7 +150,7 @@
                 },
                 success: function(response) {
                     $("#header").val(response.header);
-                    $("#content").val(response.content);
+                    CKEDITOR.instances['content_edit'].setData(response.content);
                     $("#image").html(
                         `<img src="storage/articles/${response.image}" width="200" class="img-thumbnail">`);
                     $("#article_id").val(response.id);

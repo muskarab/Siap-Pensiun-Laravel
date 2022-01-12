@@ -1,7 +1,7 @@
 @extends('layouts.landing')
 @section('content')
 {{-- Home --}}
-<header class="bg-gradient-dark">
+<header class="bg-gradient-dark" id="welcome">
     <div class="page-header min-vh-75" style="background-image: url('');">
     <span class="mask bg-gradient-secondary opacity-4"></span>
     <div class="container mt-8">
@@ -166,7 +166,7 @@
 </section>
 {{-- End Tata cara pengajuan --}}
 {{-- Ajukan Pembiayaan mu Sekarang --}}
-<section class="my-1 pt-1">
+<section class="py-6">
     <div class="container">
     <div class="row">
         <div class="col-md-6 m-auto">
@@ -288,7 +288,7 @@
 </section>
 {{-- End Partnership --}}
 {{-- Artikel --}}
-<section class="py-0" id="artikel">
+<section class="py-6" id="artikel">
     <div class="container">
     <div class="row">
         <div class="col-sm-3">
@@ -335,7 +335,7 @@
 </section>
 {{-- End Artikel --}}
 {{-- Testimoni --}}
-<section class="py-3" id="testimoni">
+<section class="py-6" id="testimoni">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -126,9 +127,11 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $article = Article::where('slug', $slug)->get();
+        // dd($article);
+        return view('article.show', compact('article'));
     }
 
     /**
@@ -169,7 +172,7 @@ class ArticleController extends Controller
         $articleData = [
             'header' => $request->header,
             'slug' => Str::slug($request->header),
-            'content' => $request->content,
+            'content' => $request->content_edit,
             'image' => $fileName,
         ];
 
