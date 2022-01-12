@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Slider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class SliderController extends Controller
 {
@@ -59,7 +60,7 @@ class SliderController extends Controller
                         <p class="text-xs font-weight-bold mb-0">' . $slider->header . '</p>
                     </td>
                     <td class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">' . $slider->content . '</p>
+                        <p class="text-xs font-weight-bold mb-0">' . Str::limit($slider->content, 50, $end = '...') . '</p>
                     </td>
                     <td class="text-center">
                         <a href="#" id="' . $slider->id . '" class="mx-3 editIcon" data-bs-toggle="modal"

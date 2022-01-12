@@ -24,6 +24,7 @@ use App\Http\Livewire\LaravelExamples\UserProfile;
 use App\Http\Livewire\LaravelExamples\UserManagement;
 use App\Models\Article;
 use App\Models\Slider;
+use App\Models\Team;
 use Illuminate\Http\Request;
 
 /*
@@ -39,8 +40,9 @@ use Illuminate\Http\Request;
 
 Route::get('/', function(){
     $sliders = Slider::get();
-    $articles = Article::get();
-    return view('welcome', compact('sliders', 'articles'));
+    $articles = Article::orderByRaw('created_at DESC')->paginate(3);
+    $teams = Team::get();
+    return view('welcome', compact('sliders', 'articles', 'teams'));
 })->name('welcome');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');

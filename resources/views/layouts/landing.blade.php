@@ -64,7 +64,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-dark z-index-3 py-3 fixed-top">
     <div class="container">
-        <a class="navbar-brand text-white" href="https://demos.creative-tim.com/soft-ui-design-system/presentation.html" rel="tooltip" title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
+        <a class="navbar-brand text-white" href="{{ route('welcome') }}">
         Siap Pensiun
         </a>
         <a href="https://www.creative-tim.com/product/soft-ui-design-system-pro#pricingCard" class="btn btn-sm  bg-gradient-primary  btn-round mb-0 ms-auto d-lg-none d-block">Buy Now</a>
@@ -87,13 +87,13 @@
                     <a class="nav-link" href="#pengajuan">Ajukan</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link">Tim</a>
+                    <a class="nav-link" href="#tim">Tim</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link">Tesimoni</a>
+                    <a class="nav-link" href="#testimoni">Tesimoni</a>
                 </li>
                 <li class="nav-item px-3">
-                    <a class="nav-link" href="{{ route('articles_landing_page') }}">Artikel</a>
+                    <a class="nav-link" href="#artikel">Artikel</a>
                 </li>
                 <li class="nav-item px-3">
                     <a class="nav-link">Bantuan</a>
