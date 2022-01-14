@@ -29,12 +29,12 @@ use App\Models\Testimoni;
 */
 
 Route::get('/', function(){
-    $sliders = Slider::get();
+    // $sliders = Slider::get();
     $articles = Article::orderByRaw('created_at DESC')->paginate(3);
     $teams = Team::get();
     $testimonies = Testimoni::get();
-    $count_testimoni = $testimonies->count();;
-    return view('welcome', compact('sliders', 'articles', 'teams', 'testimonies', 'count_testimoni'));
+    // $count_testimoni = $testimonies->count();;
+    return view('welcome', compact('articles', 'testimonies', 'teams'));
 })->name('welcome');
 
 Route::get('/sign-up', SignUp::class)->name('sign-up');
