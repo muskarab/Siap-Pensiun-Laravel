@@ -138,7 +138,7 @@
             });
         });
 
-        // edit employee ajax request
+        // edit user ajax request
         $(document).on('click', '.editIcon', function(e) {
             e.preventDefault();
             let id = $(this).attr('id');
