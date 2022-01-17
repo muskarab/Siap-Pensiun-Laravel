@@ -493,7 +493,7 @@
                 </div>
             </div>
             @endforeach
-            <div class="row">
+            <div class="row text-center">
               <div class="col lg-2">
                 <a href="{{ route('articles_landing_page') }}" class="btn btn-primary btn-sm">Semua artikel</a>
               </div>
@@ -613,7 +613,7 @@
     </section><!-- End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    {{-- <section id="contact" class="contact">
 
       <div class="container" data-aos="fade-up">
 
@@ -679,11 +679,10 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  {{-- <div class="loading">Loading</div>
+                  <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div> --}}
-                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-form-wa">Hubungi</button>
-                  {{-- <button type="submit">Send Message</button> --}}
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <button type="submit">Send Message</button>
                 </div>
 
               </div>
@@ -695,9 +694,31 @@
 
       </div>
 
-    </section><!-- End Contact Section -->
+    </section> --}}
+    <!-- End Contact Section -->
   </main><!-- End #main -->
-
+  
+  <button type="button" class="btn btn-call" id="fixedbutton" data-bs-toggle="modal" data-bs-target="#modalContact"><i class="fa fa-whatsapp"></i></button>
+  {{-- Modal Form WA --}}
+  <div class="modal fade" id="modalContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div class="card card-plain">
+              <div class="card-body">
+                <div class="text-center">
+                  {{-- <img id="img-modal-cs" src="https://sistemberkah.id/front/assets/about/illust-customerservice.png" alt="Customer Services"> --}}
+                  <h5>Jika Ada Pertanyaan Lebih Lanjut Silahkan Hubungi</h5>
+                  <p class="text-center">WA : 082335245956</p>
+                  <a href="https://wa.me/6282335245956" class="btn btn-primary">Hubungi Sekarang</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  {{-- EndModal Form --}}
   {{-- Modal Form Ajukan --}}
   <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
@@ -741,27 +762,6 @@
             </div>
           </div>
       </div>
-  </div>
-  {{-- EndModal Form --}}
-
-  {{-- Modal Form WA --}}
-  <div class="modal fade" id="modal-form-wa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body p-0">
-            <div class="card card-plain">
-              <div class="card-body">
-                <div class="text-center">
-                  {{-- <img id="img-modal-cs" src="https://sistemberkah.id/front/assets/about/illust-customerservice.png" alt="Customer Services"> --}}
-                  <h5>Jika Ada Pertanyaan Lebih Lanjut Silahkan Hubungi</h5>
-                  <p class="text-center">WA : 082335245956</p>
-                  <a href="https://wa.me/6282335245956" class="btn btn-primary">Hubungi Sekarang</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
   </div>
   {{-- EndModal Form --}}
 @endsection

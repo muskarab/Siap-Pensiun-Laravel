@@ -13,6 +13,7 @@
   <!-- Favicons -->
   <link href="{{ asset('templates') }}/img/favicon.png" rel="icon">
   <link href="{{ asset('templates') }}/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -38,7 +39,6 @@
 
 <body>
 @yield('content')
-
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
 
@@ -60,16 +60,16 @@
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
+            {{-- <h4>Useful Links</h4> --}}
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#hero">Beranda</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#about">Tentang Kami</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#pengajuan">Ajukan</a></li>
+              {{-- <li><i class="bi bi-chevron-right"></i> <a href="#pengajuan">Ajukan</a></li> --}}
               <li><i class="bi bi-chevron-right"></i> <a href="#team">Tim</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#testimonials">Testimoniy</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#article">Artikel</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#faq">Bantuan</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#contact">Kontak</a></li>
+              {{-- <li><i class="bi bi-chevron-right"></i> <a href="#contact">Kontak</a></li> --}}
             </ul>
           </div>
 
@@ -85,7 +85,7 @@
           </div> --}}
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
+            <h4>Kontak Kami</h4>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -101,7 +101,7 @@
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  {{-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> --}}
 <!-- Vendor JS Files -->
   <script src="{{ asset('templates') }}/vendor/purecounter/purecounter.js"></script>
   <script src="{{ asset('templates') }}/vendor/aos/aos.js"></script>
