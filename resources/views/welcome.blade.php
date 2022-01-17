@@ -57,7 +57,7 @@
           <li><a class="nav-link scrollto" href="#article">Artikel</a></li>
           <li><a class="nav-link scrollto" href="#faq">Bantuan</a></li>
           <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
-          <li><a class="getstarted scrollto" href="#about">Ajukan</a></li>
+          <li><a class="getstarted scrollto" href="#">Ajukan</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -691,27 +691,27 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required hidden>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required hidden>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required hidden>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required hidden></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
+                  {{-- <div class="loading">Loading</div>
                   <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <div class="sent-message">Your message has been sent. Thank you!</div> --}}
+                  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-form-wa">Hubungi</button>
+                  {{-- <button type="submit">Send Message</button> --}}
                 </div>
 
               </div>
@@ -727,51 +727,70 @@
 
 </main><!-- End #main -->
 
-    {{-- Modal Form --}}
+    {{-- Modal Form Ajukan --}}
     <div class="modal fade" id="modal-form" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
-            <div class="modal-body p-0">
-                <div class="card card-plain">
-                <div class="card-body">
-                    <form role="form text-left">
-                        <label>Nama Lengkap</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="Nama" aria-describedby="nama-addon" name="name" id="name">
-                        </div>
-                        <label>No HP / WhatsApp</label>
-                        <div class="input-group mb-3">
-                            <input type="number" class="form-control" placeholder="Masukan Nomor HP" aria-label="No" aria-describedby="no-addon" name="no_hp" id="no_hp">
-                        </div>
-                        <label>Kota</label>
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Kota" aria-label="Kota" aria-describedby="kota-addon" name="kota" id="kota">
-                        </div>
-                        <label>Alamat Lengkap</label>
-                        <div class="input-group mb-3">
-                            <textarea class="form-control" aria-label="With textarea" rows="3" name="alamat" id="alamat"></textarea>
-                        </div>
-                        <label>Deskripsi Kebutuhan Pembiayaan</label>
-                        <div class="input-group mb-3">
-                            <textarea class="form-control" aria-label="With textarea" rows="3" name="kebutuhan" id="kebutuhan"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Ajukan Sekarang</button>
-                        </div>
-                    </form>
-                </div>
-                {{-- <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                    <p class="mb-4 text-sm mx-auto">
-                    Don't have an account?
-                    <a href="javascript:;" class="text-info text-gradient font-weight-bold">Sign up</a>
-                    </p>
-                </div> --}}
-                </div>
-            </div>
+              <div class="modal-body p-0">
+                  <div class="card card-plain">
+                  <div class="card-body">
+                      <form role="form text-left">
+                          <label>Nama Lengkap</label>
+                          <div class="input-group mb-3">
+                              <input type="text" class="form-control" placeholder="Nama Lengkap" aria-label="Nama" aria-describedby="nama-addon" name="name" id="name">
+                          </div>
+                          <label>No HP / WhatsApp</label>
+                          <div class="input-group mb-3">
+                              <input type="number" class="form-control" placeholder="Masukan Nomor HP" aria-label="No" aria-describedby="no-addon" name="no_hp" id="no_hp">
+                          </div>
+                          <label>Kota</label>
+                          <div class="input-group mb-3">
+                              <input type="text" class="form-control" placeholder="Kota" aria-label="Kota" aria-describedby="kota-addon" name="kota" id="kota">
+                          </div>
+                          <label>Alamat Lengkap</label>
+                          <div class="input-group mb-3">
+                              <textarea class="form-control" aria-label="With textarea" rows="3" name="alamat" id="alamat"></textarea>
+                          </div>
+                          <label>Deskripsi Kebutuhan Pembiayaan</label>
+                          <div class="input-group mb-3">
+                              <textarea class="form-control" aria-label="With textarea" rows="3" name="kebutuhan" id="kebutuhan"></textarea>
+                          </div>
+                          <div class="text-center">
+                              <button type="submit" class="btn btn-primary">Ajukan Sekarang</button>
+                          </div>
+                      </form>
+                  </div>
+                  {{-- <div class="card-footer text-center pt-0 px-lg-2 px-1">
+                      <p class="mb-4 text-sm mx-auto">
+                      Don't have an account?
+                      <a href="javascript:;" class="text-info text-gradient font-weight-bold">Sign up</a>
+                      </p>
+                  </div> --}}
+                  </div>
+              </div>
             </div>
         </div>
     </div>
     {{-- EndModal Form --}}
+
+    <div class="modal fade" id="modal-form-wa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-body p-0">
+              <div class="card card-plain">
+                <div class="card-body">
+                  <div class="text-center">
+                    {{-- <img id="img-modal-cs" src="https://sistemberkah.id/front/assets/about/illust-customerservice.png" alt="Customer Services"> --}}
+                    <h5>Jika Ada Pertanyaan Lebih Lanjut Silahkan Hubungi</h5>
+                    <p class="text-center">WA : 082335245956</p>
+                    <a href="https://wa.me/6282335245956" class="btn btn-primary">Hubungi Sekarang</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
@@ -796,15 +815,18 @@
           <div class="col-lg-2 col-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero">Beranda</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about">Tentang Kami</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#pengajuan">Ajukan</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#team">Tim</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#testimonials">Testimoniy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#article">Artikel</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#faq">Bantuan</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#contact">Kontak</a></li>
             </ul>
           </div>
 
-          <div class="col-lg-2 col-6 footer-links">
+          {{-- <div class="col-lg-2 col-6 footer-links">
             <h4>Our Services</h4>
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -813,7 +835,7 @@
               <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
-          </div>
+          </div> --}}
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
