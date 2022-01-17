@@ -64,9 +64,9 @@ class ArticleController extends Controller
                         </div>
                     </td>
                     <td class="text-center">
-                        <p class="text-xs font-weight-bold mb-0">' . $article->header . '</p>
+                        <p class="text-xs font-weight-bold mb-0">' . Str::limit($article->header, 50, $end = '...') . '</p>
                     </td>
-                    <td>
+                    <td class="text-center">
                         <p class="text-xs font-weight-bold mb-0">' . Str::limit($article->content, 50, $end = '...') . '</p>
                     </td>
                     <td class="text-center">

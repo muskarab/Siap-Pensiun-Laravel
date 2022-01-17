@@ -112,6 +112,7 @@
         $("#add_article_form").submit(function(e) {
             e.preventDefault();
             const fd = new FormData(this);
+            $("#add_article_btn").click();
             $("#add_article_btn").text('Adding...');
             $.ajax({
             url: '{{ route('store_article') }}',

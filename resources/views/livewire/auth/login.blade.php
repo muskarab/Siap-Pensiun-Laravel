@@ -8,8 +8,6 @@
                             <h3 class="font-weight-bolder text-info text-gradient">{{ __('Welcome back') }}</h3>
                             <p class="mb-0">{{ __('Create a new acount')}}<br></p>
                             <p class="mb-0">{{__('OR Sign in with these credentials:') }}</p>
-                            <p class="mb-0">{{ __('Email ') }}<b>{{ __('admin@gmail.com') }}</b></p>
-                            <p class="mb-0">{{ __('Password ') }}<b>{{ __('admin123') }}</b></p>
                         </div>
                         <div class="card-body">
                             <form wire:submit.prevent="login" action="#" method="POST" role="form text-left">

@@ -44,6 +44,9 @@ Route::get('/login/forgot-password', ForgotPassword::class)->name('forgot-passwo
  
 Route::get('/reset-password/{id}',ResetPassword::class)->name('reset-password')->middleware('signed');
 
+Route::get('/article', [ArticleController::class, 'index_landing_page'])->name('articles_landing_page');
+Route::get('/article/{slug}', [ArticleController::class, 'show']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::group(['middleware' => ['cek_login:Admin']], function () {
@@ -63,8 +66,6 @@ Route::middleware('auth')->group(function () {
         Route::delete('/sliders/delete', [SliderController::class, 'destroy'])->name('delete_slider');
         // Articles
         Route::get('/articles', [ArticleController::class, 'index'])->name('articles');
-        Route::get('/article', [ArticleController::class, 'index_landing_page'])->name('articles_landing_page');
-        Route::get('/article/{slug}', [ArticleController::class, 'show']);
         Route::get('/articles/fetchall', [ArticleController::class, 'fetchAll'])->name('fetchAll_article');
         Route::post('/articles/store', [ArticleController::class, 'store'])->name('store_article');
         Route::get('/articles/edit', [ArticleController::class, 'edit'])->name('edit_article');
