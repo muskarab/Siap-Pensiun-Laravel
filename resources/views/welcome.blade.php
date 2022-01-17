@@ -13,12 +13,12 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
           <li><a class="nav-link scrollto" href="#about">Tentang Kami</a></li>
-          <li><a class="nav-link scrollto" href="#pengajuan">Ajukan</a></li>
+          {{-- <li><a class="nav-link scrollto" href="#pengajuan">Ajukan</a></li> --}}
           <li><a class="nav-link scrollto" href="#team">Tim</a></li>
           <li><a class="nav-link scrollto" href="#testimonials">Testimoni</a></li>
           <li><a class="nav-link scrollto" href="#article">Artikel</a></li>
           <li><a class="nav-link scrollto" href="#faq">Bantuan</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Kontak</a></li>
+          {{-- <li><a class="nav-link scrollto" href="#contact">Kontak</a></li> --}}
           <li><a class="getstarted scrollto" href="#">Ajukan</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -448,21 +448,27 @@
           {{-- <h2>Our Clients</h2> --}}
           <p>Partnership</p>
         </header>
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-3 text-center">
+            <img src="{{ asset('templates') }}/img/clients/logo-bsi-color.svg" class="img-partner" alt="">
+          </div>
+          <div class="col-md-3 text-center">
+            <img src="{{ asset('templates') }}/img/clients/logo-eka-black.png" class="img-partner" alt="">
+          </div>
+        </div>
 
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
+        {{-- <div class="clients-slider swiper">
+          <div class="swiper-wrapper align-items-center"> --}}
             {{-- <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-1.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-2.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-3.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-4.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-5.png" class="img-fluid" alt=""></div>
             <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-6.png" class="img-fluid" alt=""></div> --}}
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/logo-bsi-color.svg" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/logo-eka-black.png" class="img-fluid" alt=""></div>
-          </div>
+          {{-- </div>
           <div class="swiper-pagination"></div>
         </div>
-      </div>
+      </div> --}}
 
     </section><!-- End Clients Section -->
 
@@ -481,7 +487,7 @@
             <div class="col-lg-4">
                 <div class="post-box">
                     <div class="post-img"><img src="storage/articles/{{$article->image }}" class="img-fluid" alt=""></div>
-                    <span class="post-date">{{$article->created_at }}</span>
+                    <span class="post-date">{{$article->created_at->format('d-m-Y') }}</span>
                     <h3 class="post-title">{{ $article->header }}</h3>
                     <a href="/article/{{ $article->slug }}" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
                 </div>

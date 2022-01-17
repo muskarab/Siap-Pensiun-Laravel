@@ -13,12 +13,12 @@
             <ul>
             <li><a class="nav-link scrollto" href="/#hero">Beranda</a></li>
             <li><a class="nav-link scrollto" href="/#about">Tentang Kami</a></li>
-            <li><a class="nav-link scrollto" href="/#pengajuan">Ajukan</a></li>
+            {{-- <li><a class="nav-link scrollto" href="/#pengajuan">Ajukan</a></li> --}}
             <li><a class="nav-link scrollto" href="/#team">Tim</a></li>
             <li><a class="nav-link scrollto" href="/#testimonials">Testimoni</a></li>
             <li><a class="nav-link scrollto active" href="/#article">Artikel</a></li>
             <li><a class="nav-link scrollto" href="/#faq">Bantuan</a></li>
-            <li><a class="nav-link scrollto" href="/#contact">Kontak</a></li>
+            {{-- <li><a class="nav-link scrollto" href="/#contact">Kontak</a></li> --}}
             <li><a class="getstarted scrollto" href="#">Ajukan</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
