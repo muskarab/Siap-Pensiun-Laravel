@@ -5,8 +5,8 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="#" class="logo d-flex align-items-center">
-        <img src="{{ asset('templates') }}/img/logo.png" alt="">
-        <span>Siap Pensiun</span>
+        <img src="{{ asset('templates') }}/img/logo-siap-pensiun-panjang.png" alt="">
+        {{-- <span>Siap Pensiun</span> --}}
       </a>
 
       <nav id="navbar" class="navbar">
@@ -33,14 +33,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center">
-          <h1 data-aos="fade-up">We offer modern solutions for growing your business</h1>
-          <h2 data-aos="fade-up" data-aos-delay="400">We are team of talented designers making websites with Bootstrap</h2>
+          <h1 data-aos="fade-up">Bakti kami kepada Aparatur Sipil Negara dan Karyawan Badan Usaha Milik Negara</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Demi memberikan informasi, literasi dan solusi pembiayaan kepada ASN dan BUMN untuk mempersiapkan masa pensiun penuh peluang</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              {{-- <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Get Started</span>
                 <i class="bi bi-arrow-right"></i>
-              </a>
+              </a> --}}
             </div>
           </div>
         </div>
@@ -62,12 +62,12 @@
           <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
             <div class="content">
               {{-- <h3>Teantang Kami</h3> --}}
-              <h2>Teantang Kami</h2>
+              <h2>Tentang Kami</h2>
               <p>
-                Siap Pensiun merupakan platform milik PT. Eka Akar Jati yang menyediakan fasilitas pembiayaan syariah dan berafiliasi langsung dengan PT Bank Syariah Indonesia Tbk. Siber merupakan platform pembiayaan online pertama yang mengakomodir kebutuhan para Aparatur Sipil Negara di Indonesia.
+                Siap Pensiun merupakan platform milik PT. Eka Akar Jati yang menyediakan fasilitas pembiayaan syariah dan berafiliasi langsung dengan PT Bank Syariah Indonesia Tbk. Siap Pensiun merupakan platform pembiayaan online pertama yang mengakomodir kebutuhan para Aparatur Sipil Negara di Indonesia dan Karyawan BUMN dalam mengakses informasi, literasi keuangan untuk mempersiapkan masa depan penuh peluang
               </p>
               <div class="text-center text-lg-start">
-                <a href="#" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                <a href="{{ route('about') }}" class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
                   <span>Baca Selengkapnya</span>
                   <i class="bi bi-arrow-right"></i>
                 </a>
@@ -82,7 +82,8 @@
         </div>
       </div>
 
-    </section><!-- End About Section -->
+    </section>
+    <!-- End About Section -->
 
     <!-- ======= Values Section ======= -->
     <section id="values" class="values">
@@ -91,7 +92,7 @@
 
         <header class="section-header">
           {{-- <h2>Our Values</h2> --}}
-          <p>Penjelasan</p>
+          <p>Apa yang Anda Dapatkan</p>
         </header>
 
         <div class="row">
@@ -99,24 +100,24 @@
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
               <img src="{{ asset('templates') }}/img/values-1.png" class="img-fluid" alt="">
-              <h3>Ad cupiditate sed est odio</h3>
-              <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+              <h3>Literasi Keuangan</h3>
+              <p>Dapatkan informasi mengenai literasi keuangan untuk mempersiapkan masa pensiun</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
               <img src="{{ asset('templates') }}/img/values-2.png" class="img-fluid" alt="">
-              <h3>Voluptatem voluptatum alias</h3>
-              <p>Repudiandae amet nihil natus in distinctio suscipit id. Doloremque ducimus ea sit non.</p>
+              <h3>Inspirasi Bisnis</h3>
+              <p>Dapatkan inspirasi dan tips bisnis untuk meraih peluang peluang baru</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
               <img src="{{ asset('templates') }}/img/values-3.png" class="img-fluid" alt="">
-              <h3>Fugit cupiditate alias nobis.</h3>
-              <p>Quam rem vitae est autem molestias explicabo debitis sint. Vero aliquid quidem commodi.</p>
+              <h3>Akses Pembiayaan</h3>
+              <p>Dengan berafiliasi langsung dengan Bank Syariah Indonesia, kami dapat membantu mendapatkan akses pembiayaan syariah untuk mendukung persiapan pensiun yang penuh peluang</p>
             </div>
           </div>
 
@@ -124,7 +125,8 @@
 
       </div>
 
-    </section><!-- End Values Section -->
+    </section>
+    <!-- End Values Section -->
 
     <!-- ======= Features Section ======= -->
     <section id="pengajuan" class="features">
@@ -206,42 +208,42 @@
               <div class="row align-self-center gy-4">
 
                 <div class="col-md-6 icon-box" data-aos="fade-up">
-                  <i class="ri-line-chart-line"></i>
+                  <i class="ri-book-read-line"></i>
                   <div>
                     <h4>Pahami prosedur persyaratan pembiayaan</h4>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                  <i class="ri-stack-line"></i>
+                  <i class="ri-ball-pen-line"></i>
                   <div>
                     <h4>Isi form pada menu pengajuan pembiayaan</h4>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                  <i class="ri-brush-4-line"></i>
+                  <i class="ri-timer-line"></i>
                   <div>
                     <h4>Tunggu dihubungi oleh tim kami</h4>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                  <i class="ri-magic-line"></i>
+                  <i class="ri-team-line"></i>
                   <div>
                     <h4>Anda akan didatangi oleh marketing kami untuk pengumpulan berkas</h4>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                  <i class="ri-command-line"></i>
+                  <i class="ri-computer-line"></i>
                   <div>
                     <h4>Pengajuan anda akan diproses oleh tim Bank Syariah Indonesia setelah berkas lengkap</h4>
                   </div>
                 </div>
 
                 <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                  <i class="ri-radar-line"></i>
+                  <i class="ri-money-dollar-box-line"></i>
                   <div>
                     <h4>Dana berhasil dicairkan</h4>
                   </div>
@@ -256,41 +258,43 @@
 
         <!-- Feature Tabs -->
         <div class="row feture-tabs" data-aos="fade-up">
-          <div class="col-lg-6">
-            <h3>Bersama Bank Syariah Indonesia jadi #LebihBerkah</h3>
+          <div class="col-lg-8">
+            <h3>Konsultasikan Kebutuhanmu Sekarang!</h3>
 
             <!-- Tabs -->
-            <ul class="nav nav-pills mb-3">
+            {{-- <ul class="nav nav-pills mb-3">
               <li>
                 <a class="nav-link active" data-bs-toggle="pill" href="#tab1">Pensiun</a>
               </li>
-            </ul><!-- End Tabs -->
+            </ul> --}}
+            <!-- End Tabs -->
 
             <!-- Tab Content -->
             <div class="tab-content">
-              <div class="tab-pane fade show active" id="tab1">
+              {{-- <div class="tab-pane fade show active" id="tab1"> --}}
                 <div class="d-flex align-items-center mb-2">
-                  <h4>Pembiayaan Pensiun merupakan pembiayaan yang diberikan kepada para pensiunan Pegawai Negeri Sipil (PNS)</h4>
+                  <h4>Awali langkah persiapan masa pensiunmu yang penuh peluang dengan bergabung menjadi Bagian Bank Syariah Indonesia</h4>
                 </div>
                 <div class="row">
                     <div class="col md-3">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-form">Ajukan Sekarang</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modal-form" style="background: #0ba59d;">Ajukan Sekarang</button>
                     </div>
                 </div>
-              </div><!-- End Tab 1 Content -->
+              {{-- </div><!-- End Tab 1 Content --> --}}
             </div>
 
           </div>
 
-          <div class="col-lg-6">
-            <img src="{{ asset('templates') }}/img/features-2.png" class="img-fluid" alt="">
+          <div class="col-lg-4">
+            <img src="{{ asset('templates') }}/img/features-2.png" class="img-fluid" alt="" width="500">
           </div>
 
         </div><!-- End Feature Tabs -->
 
       </div>
 
-    </section><!-- End Features Section -->
+    </section>
+    <!-- End Features Section -->
 
     <!-- ======= Services Section ======= -->
     {{-- <section id="services" class="services">
@@ -362,10 +366,11 @@
 
       </div>
 
-    </section><!-- End Services Section --> --}}
+    </section>
+    <!-- End Services Section --> --}}
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
+    {{-- <section id="team" class="team">
 
       <div class="container" data-aos="fade-up">
 
@@ -390,7 +395,7 @@
                 <div class="member-info">
                     <h4>{{ $item->name }}</h4>
                     <span>{{ $item->position }}</span>
-                    {{-- <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p> --}}
+                    <p>Velit aut quia fugit et et. Dolorum ea voluptate vel tempore tenetur ipsa quae aut. Ipsum exercitationem iure minima enim corporis et voluptate.</p>
                 </div>
                 </div>
             </div>
@@ -399,10 +404,11 @@
 
       </div>
 
-    </section><!-- End Team Section -->
+    </section> --}}
+    <!-- End Team Section -->
 
     <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
+    {{-- <section id="testimonials" class="testimonials">
 
       <div class="container" data-aos="fade-up">
 
@@ -425,10 +431,10 @@
                 <div class="profile mt-auto">
                   <img src="storage/testimonies/{{$testimonie->avatar }}" class="testimonial-img" alt="">
                   <h3>{{ $testimonie->name }}</h3>
-                  {{-- <h4>Ceo &amp; Founder</h4> --}}
+                  <h4>Ceo &amp; Founder</h4>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
             @endforeach
 
           </div>
@@ -437,7 +443,8 @@
 
       </div>
 
-    </section><!-- End Testimonials Section -->
+    </section> --}}
+    <!-- End Testimonials Section -->
 
     <!-- ======= Clients Section ======= -->
     <section id="clients" class="clients">
@@ -470,7 +477,8 @@
         </div>
       </div> --}}
 
-    </section><!-- End Clients Section -->
+    </section>
+    <!-- End Clients Section -->
 
     <!-- ======= Recent Blog Posts Section ======= -->
     <section id="article" class="recent-blog-posts">
@@ -495,17 +503,18 @@
             @endforeach
             <div class="row text-center">
               <div class="col lg-2">
-                <a href="{{ route('articles_landing_page') }}" class="btn btn-primary btn-sm">Semua artikel</a>
+                <a href="{{ route('articles_landing_page') }}" class="btn btn-primary btn-sm" style="background: #0ba59d;">Semua artikel</a>
               </div>
             </div>
         </div>
 
       </div>
 
-    </section><!-- End Recent Blog Posts Section -->
+    </section>
+    <!-- End Recent Blog Posts Section -->
 
     <!-- ======= F.A.Q Section ======= -->
-    <section id="faq" class="faq">
+    {{-- <section id="faq" class="faq">
 
       <div class="container" data-aos="fade-up">
 
@@ -610,15 +619,17 @@
 
       </div>
 
-    </section><!-- End F.A.Q Section -->
+    </section> --}}
+    <!-- End F.A.Q Section -->
 
     <!-- ======= Contact Section ======= -->
-    {{-- <section id="contact" class="contact">
+    <section id="contact" class="contact">
 
       <div class="container" data-aos="fade-up">
 
         <header class="section-header">
-          <p>Kontak Kami</p>
+          {{-- <h2>Contact</h2> --}}
+          <p>Hubungi Kami</p>
         </header>
 
         <div class="row gy-4">
@@ -630,21 +641,21 @@
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
-                  <p>A108 Adam Street,<br>New York, NY 535022</p>
+                  <p>Jl. Dawuhan Tegalgondo RT 24/06<br>Karangploso, Malang, Jawa Timur, 65152</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
-                  <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+                  <p>0341-5032189</p>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="info-box">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
-                  <p>info@example.com<br>contact@example.com</p>
+                  <p>admin@ekakarjati.com</p>
                 </div>
               </div>
               <div class="col-md-6">
@@ -663,25 +674,26 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required hidden>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required hidden>
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required hidden>
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required hidden></textarea>
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">
                   <div class="loading">Loading</div>
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
+
                   <button type="submit">Send Message</button>
                 </div>
 
@@ -694,8 +706,9 @@
 
       </div>
 
-    </section> --}}
+    </section>
     <!-- End Contact Section -->
+
   </main><!-- End #main -->
   
   <button type="button" class="btn btn-call" id="fixedbutton" data-bs-toggle="modal" data-bs-target="#modalContact"><i class="fa fa-whatsapp"></i></button>
@@ -748,7 +761,7 @@
                             <textarea class="form-control" aria-label="With textarea" rows="3" name="kebutuhan" id="kebutuhan"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Ajukan Sekarang</button>
+                            <button type="submit" class="btn btn-primary" style="background: #0ba59d;">Ajukan Sekarang</button>
                         </div>
                     </form>
                 </div>

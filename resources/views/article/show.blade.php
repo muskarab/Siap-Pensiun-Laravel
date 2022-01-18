@@ -5,8 +5,8 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
         <a href="#" class="logo d-flex align-items-center">
-            <img src="{{ asset('templates') }}/img/logo.png" alt="">
-            <span>Siap Pensiun</span>
+            <img src="{{ asset('templates') }}/img/logo-siap-pensiun-panjang.png" alt="">
+            {{-- <span>Siap Pensiun</span> --}}
         </a>
 
         <nav id="navbar" class="navbar">

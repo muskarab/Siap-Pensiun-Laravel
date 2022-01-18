@@ -37,6 +37,10 @@ Route::get('/', function(){
     return view('welcome', compact('articles', 'testimonies', 'teams'));
 })->name('welcome');
 
+Route::get('/about', function(){
+    return view('about');
+})->name('about');
+
 Route::get('/sign-up', SignUp::class)->name('sign-up');
 Route::get('/login', Login::class)->name('login');
 
