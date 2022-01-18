@@ -12,7 +12,7 @@
         <nav id="navbar" class="navbar">
             <ul>
             <li><a class="nav-link scrollto" href="/#hero">Beranda</a></li>
-            <li><a class="nav-link scrollto active" href="/#about">Tentang Kami</a></li>
+            <li><a class="nav-link scrollto active">Tentang Kami</a></li>
             {{-- <li><a class="nav-link scrollto" href="/#pengajuan">Ajukan</a></li> --}}
             <li><a class="nav-link scrollto" href="/#team">Tim</a></li>
             <li><a class="nav-link scrollto" href="/#testimonials">Testimoni</a></li>
@@ -31,36 +31,30 @@
     <!-- ======= Values Section ======= -->
     <section id="values" class="values">
 
-      <div class="container" data-aos="fade-up">
+      <div class="container mt-5" data-aos="fade-up">
 
         <header class="section-header">
           {{-- <h2>Our Values</h2> --}}
-          <p>Apa yang Anda Dapatkan</p>
+          <p>Tentang Kami</p>
         </header>
 
         <div class="row">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/values-1.png" class="img-fluid" alt="">
-              <h3>Literasi Keuangan</h3>
-              <p>Dapatkan informasi mengenai literasi keuangan untuk mempersiapkan masa pensiun</p>
+              <p>Siap Pensiun merupakan platform milik PT. Eka Akar Jati yang menyediakan fasilitas pembiayaan syariah dan berafiliasi langsung dengan PT Bank Syariah Indonesia Tbk. Siap Pensiun merupakan platform pembiayaan online pertama yang mengakomodir kebutuhan para Aparatur Sipil Negara di Indonesia dan Karyawan BUMN dalam mengakses informasi, literasi keuangan untuk mempersiapkan masa depan penuh peluang</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/values-2.png" class="img-fluid" alt="">
-              <h3>Inspirasi Bisnis</h3>
-              <p>Dapatkan inspirasi dan tips bisnis untuk meraih peluang peluang baru</p>
+              <p>Siap Pensiun merupakan platform milik PT. Eka Akar Jati yang menyediakan fasilitas pembiayaan syariah dan berafiliasi langsung dengan PT Bank Syariah Indonesia Tbk. Siap Pensiun merupakan platform pembiayaan online pertama yang mengakomodir kebutuhan para Aparatur Sipil Negara di Indonesia dan Karyawan BUMN dalam mengakses informasi, literasi keuangan untuk mempersiapkan masa depan penuh peluang</p>
             </div>
           </div>
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/values-3.png" class="img-fluid" alt="">
-              <h3>Akses Pembiayaan</h3>
-              <p>Dengan berafiliasi langsung dengan Bank Syariah Indonesia, kami dapat membantu mendapatkan akses pembiayaan syariah untuk mendukung persiapan pensiun yang penuh peluang</p>
+              <p>Siap Pensiun merupakan platform milik PT. Eka Akar Jati yang menyediakan fasilitas pembiayaan syariah dan berafiliasi langsung dengan PT Bank Syariah Indonesia Tbk. Siap Pensiun merupakan platform pembiayaan online pertama yang mengakomodir kebutuhan para Aparatur Sipil Negara di Indonesia dan Karyawan BUMN dalam mengakses informasi, literasi keuangan untuk mempersiapkan masa depan penuh peluang</p>
             </div>
           </div>
 

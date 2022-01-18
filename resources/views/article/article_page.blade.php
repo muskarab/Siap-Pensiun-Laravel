@@ -48,8 +48,8 @@
             <div class="container" data-aos="fade-up">
 
                 <div class="row">
-                    @foreach ($articles as $article)
                     <div class="col-lg-8 entries">
+                        @foreach ($articles as $article)
                         <article class="entry">
 
                             <div class="entry-img">
@@ -86,8 +86,8 @@
                                 <li><a href="#">3</a></li>
                             </ul>
                         </div> --}}
+                        @endforeach
                     </div>
-                    @endforeach
                     <!-- End blog entries list -->
 
                     <div class="col-lg-4">
