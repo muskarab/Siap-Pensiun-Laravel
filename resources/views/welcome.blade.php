@@ -5,7 +5,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="#" class="logo d-flex align-items-center">
-        <img src="{{ asset('templates') }}/img/logo-siap-pensiun-panjang.png" alt="">
+        <img src="../templates/assets/img/logo-siap-pensiun-panjang.png" alt="">
         {{-- <span>Siap Pensiun</span> --}}
       </a>
 
@@ -45,7 +45,7 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
-          <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN.png" class="img-fluid" alt="">
+          <img src="../templates/assets/img/Aset Web SIAPENSIUN.png" class="img-fluid" alt="">
         </div>
       </div>
     </div>
@@ -76,7 +76,7 @@
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN6.jpg" class="img-fluid" alt="">
+            <img src="../templates/assets/img/Aset Web SIAPENSIUN6.jpg" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -99,7 +99,7 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN2.png" class="img-fluid" alt="">
+              <img src="../templates/assets/img/Aset Web SIAPENSIUN2.png" class="img-fluid" alt="">
               <h3>Literasi Keuangan</h3>
               <p>Dapatkan informasi mengenai literasi keuangan untuk mempersiapkan masa pensiun</p>
             </div>
@@ -107,7 +107,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN3.png" class="img-fluid" alt="">
+              <img src="../templates/assets/img/Aset Web SIAPENSIUN3.png" class="img-fluid" alt="">
               <h3>Inspirasi Bisnis</h3>
               <p>Dapatkan inspirasi dan tips bisnis untuk meraih peluang peluang baru</p>
             </div>
@@ -115,7 +115,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
-              <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN4.png" class="img-fluid" alt="">
+              <img src="../templates/assets/img/Aset Web SIAPENSIUN4.png" class="img-fluid" alt="">
               <h3>Akses Pembiayaan</h3>
               <p>Dengan berafiliasi langsung dengan Bank Syariah Indonesia, kami dapat membantu mendapatkan akses pembiayaan syariah untuk mendukung persiapan pensiun yang penuh peluang</p>
             </div>
@@ -141,7 +141,7 @@
         {{-- <div class="row">
 
           <div class="col-lg-6">
-            <img src="{{ asset('templates') }}/img/features.png" class="img-fluid" alt="">
+            <img src="../templates/assets/img/features.png" class="img-fluid" alt="">
           </div>
 
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
@@ -201,7 +201,7 @@
           <div class="row">
 
             <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
-              <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN5.png" class="img-fluid p-4" alt="">
+              <img src="../templates/assets/img/Aset Web SIAPENSIUN5.png" class="img-fluid p-4" alt="">
             </div>
 
             <div class="col-xl-8 d-flex content">
@@ -286,7 +286,7 @@
           </div>
 
           <div class="col-lg-4">
-            <img src="{{ asset('templates') }}/img/Aset Web SIAPENSIUN7.png" class="img-fluid" alt="" width="500">
+            <img src="../templates/assets/img/Aset Web SIAPENSIUN7.png" class="img-fluid" alt="">
           </div>
 
         </div><!-- End Feature Tabs -->
@@ -457,21 +457,21 @@
         </header>
         <div class="row d-flex justify-content-center align-items-center">
           <div class="col-md-3 text-center">
-            <img src="{{ asset('templates') }}/img/clients/logo-bsi-color.svg" class="img-partner" alt="">
+            <img src="../templates/assets/img/clients/logo-bsi-color.svg" class="img-partner" alt="">
           </div>
           <div class="col-md-3 text-center">
-            <img src="{{ asset('templates') }}/img/clients/logo-eka-black.png" class="img-partner" alt="">
+            <img src="../templates/assets/img/clients/logo-eka-black.png" class="img-partner" alt="">
           </div>
         </div>
 
         {{-- <div class="clients-slider swiper">
           <div class="swiper-wrapper align-items-center"> --}}
-            {{-- <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="{{ asset('templates') }}/img/clients/client-6.png" class="img-fluid" alt=""></div> --}}
+            {{-- <div class="swiper-slide"><img src="../templates/assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="../templates/assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="../templates/assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="../templates/assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="../templates/assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
+            <div class="swiper-slide"><img src="../templates/assets/img/clients/client-6.png" class="img-fluid" alt=""></div> --}}
           {{-- </div>
           <div class="swiper-pagination"></div>
         </div>
